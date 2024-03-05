@@ -13,7 +13,9 @@ export const getApiDocs = async () => {
       },
       servers: [
         {
-          url: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL }` || "http://localhost:3000",
+          url: process.env.VERCEL_URL
+            ? `https://${process.env.VERCEL_URL}`
+            : "http://localhost:3000",
         },
       ],
       components: {

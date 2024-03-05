@@ -37,7 +37,7 @@
  *                   description: The hash of the image
  */
 import { Midjourney } from "midjourney";
-export const maxDuration = 600;
+export const maxDuration = 300;
 
 const serverId: string = process.env.SERVER_ID!;
 const channelId: string = process.env.CHANNEL_ID!;

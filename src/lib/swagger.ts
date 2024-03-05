@@ -2,6 +2,7 @@ import { createSwaggerSpec } from "next-swagger-doc";
 
 import "server-only";
 
+const PUBLIC_URL = process.env.PUBLIC_URL || "http://localhost:3000";
 export const getApiDocs = async () => {
   const spec = createSwaggerSpec({
     apiFolder: "src/app/api",
@@ -13,9 +14,7 @@ export const getApiDocs = async () => {
       },
       servers: [
         {
-          url: process.env.VERCEL_URL
-            ? `https://${process.env.VERCEL_URL}`
-            : "http://localhost:3000",
+          url: process.env.PUBLIC_URL || "http://localhost:3000",
         },
       ],
       components: {

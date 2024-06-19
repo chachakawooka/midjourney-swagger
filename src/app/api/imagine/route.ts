@@ -63,7 +63,7 @@ export async function GET(_request: Request) {
     Ws: false,
   });
 
-  const fullPrompt = `${prompt}, stock photography ${flags} --style raw --v 6`;
+  const fullPrompt = `${prompt} ${flags} --style raw --v 6`;
   const imagine = await midjourney.Imagine(fullPrompt);
 
   const imagineResponse: ImagineResponse = imagine
